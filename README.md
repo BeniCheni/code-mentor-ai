@@ -1,20 +1,14 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/a25d7f27-4fa3-4578-a5ad-0d0700b18a21" />
+<br />
+<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/a7dd51bc-d73e-4ddd-9e32-04d482292f55" />
 </div>
 
-# Run and deploy your AI Studio app
+# Try Code Mentor AI
+https://code-mentor-ai-a9dec.web.app/
 
-This contains everything you need to run your app locally.
+# Run Locally
 
-View your app in AI Studio: https://ai.studio/apps/drive/1oxlt3Wo12qvm6j2O9iLLDBwIIDq-eQEi
-
-## Run Locally
-
-**Prerequisites:**  Node.js
-
-
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+1. Install dependencies: `npm i`
+2. Set the `VITE_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app: `npm run dev`
