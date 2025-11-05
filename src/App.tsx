@@ -1,9 +1,9 @@
-import React, { useState, useCallback } from 'react';
-import { CodeInput } from './components/CodeInput';
-import { ExplanationOutput } from './components/ExplanationOutput';
-import { getCodeExplanation } from './services/geminiService';
-import type { CodeExplanation } from './types';
-import { GithubIcon } from './components/icons';
+import React, {useCallback, useState} from 'react';
+import {CodeInput} from './components/CodeInput';
+import {ExplanationOutput} from './components/ExplanationOutput';
+import {getCodeExplanation} from './services/geminiService';
+import type {CodeExplanation} from './types';
+import {GithubIcon} from './components/icons';
 
 const App: React.FC = () => {
   const [code, setCode] = useState<string>(`/**
@@ -91,14 +91,15 @@ const rob = function(nums) {
         <h1 className="text-2xl font-bold text-white">
           <span className="text-brand-secondary">Code</span> Mentor AI
         </h1>
-        <a href="https://github.com/google/generative-ai-docs" target="_blank" rel="noopener noreferrer" className="text-content-200 hover:text-white transition-colors">
+        <a href="https://github.com/BeniCheni/code-mentor-ai" target="_blank" rel="noopener noreferrer"
+           className="text-content-200 hover:text-white transition-colors">
           <GithubIcon className="w-6 h-6" />
         </a>
       </header>
-      
+
       <main className="flex flex-col md:flex-row h-[calc(100vh-65px)]">
         <div className="w-full md:w-1/2 p-4 flex flex-col">
-           <CodeInput 
+          <CodeInput
              code={code}
              setCode={setCode}
              onSubmit={handleExplainCode}
@@ -106,7 +107,7 @@ const rob = function(nums) {
            />
         </div>
         <div className="w-full md:w-1/2 p-4 border-t md:border-t-0 md:border-l border-base-300 overflow-y-auto">
-          <ExplanationOutput 
+          <ExplanationOutput
             explanation={explanation}
             isLoading={isLoading}
             error={error}
