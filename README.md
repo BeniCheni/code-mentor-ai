@@ -5,7 +5,10 @@
 </div>
 
 # Try Code Mentor AI
+
 https://code-mentor-ai-a9dec.web.app/
+
+Personal AI Code Mentor for mastering DSA, System Design, and articulating your experience and technical decisions.
 
 # Run Locally
 
