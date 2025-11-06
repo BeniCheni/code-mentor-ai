@@ -1,4 +1,6 @@
 import React, {useCallback, useState} from 'react';
+import {ResizableBox} from 'react-resizable';
+import 'react-resizable/css/styles.css';
 import {CodeInput} from './components/CodeInput';
 import {ExplanationOutput} from './components/ExplanationOutput';
 import {getCodeExplanation} from './services/geminiService';
@@ -98,14 +100,22 @@ const rob = function(nums) {
       </header>
 
       <main className="flex flex-col md:flex-row h-[calc(100vh-65px)]">
-        <div className="w-full md:w-1/2 p-4 flex flex-col">
+        <ResizableBox
+          className="w-full md:w-1/2 p-4 flex flex-col"
+          height={window.innerHeight * 0.85}
+          width={Infinity}
+          axis="y"
+          minConstraints={[Infinity, window.innerHeight * 0.2]}
+          maxConstraints={[Infinity, window.innerHeight * 0.9]}
+          handle={<div className="w-full h-2 bg-base-300 cursor-row-resize"/>}
+        >
           <CodeInput
-             code={code}
-             setCode={setCode}
-             onSubmit={handleExplainCode}
-             isLoading={isLoading}
-           />
-        </div>
+            code={code}
+            setCode={setCode}
+            onSubmit={handleExplainCode}
+            isLoading={isLoading}
+          />
+        </ResizableBox>
         <div className="w-full md:w-1/2 p-4 border-t md:border-t-0 md:border-l border-base-300 overflow-y-auto">
           <ExplanationOutput
             explanation={explanation}

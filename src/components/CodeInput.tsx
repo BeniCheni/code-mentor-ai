@@ -24,7 +24,7 @@ export const CodeInput: React.FC<CodeInputProps> = ({ code, setCode, onSubmit, i
       <div className="p-3 border-t border-base-300">
         <button
           onClick={onSubmit}
-          disabled={isLoading || !code.trim()}
+          disabled={isLoading}
           className="w-full flex items-center justify-center px-4 py-2 bg-brand-primary text-white font-semibold rounded-md hover:bg-brand-secondary transition-colors disabled:bg-base-300 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-base-200 focus:ring-brand-secondary"
         >
           {isLoading ? (
